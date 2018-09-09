@@ -1,0 +1,31 @@
+{
+  "name": "finolog-node",
+  "version": "1.0.0",
+  "description": "Official Node bindings to the Finolog API",
+  "module": "src/index.js",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "test": "mocha --require babel-register"
+  },
+  "keywords": [
+    "finolog",
+    "api"
+  ],
+  "author": "hello@finolog.ru",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "chai": "^4.1.2",
+    "dotenv": "^6.0.0",
+    "mocha": "^5.2.0",
+    "mocha-webpack": "^1.1.0",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0"
+  },
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
+}
