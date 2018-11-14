@@ -1,12 +1,12 @@
 import { assert } from 'chai';
 import 'dotenv/config';
-import Finolog, { User, Biz, Currency, Company, Account, Transaction, Category, Project, Contractor, Requisite} from '../src/index';
+import Client, { User, Biz, Currency, Company, Account, Transaction, Category, Project, Contractor, Requisite } from '../src/index';
 
 
-describe('Finolog', () => {
+describe('Client', () => {
     describe('Request', () => {
         const payload = { first_name: 'Request first name', last_name: 'Request last name' };
-        const finolog = new Finolog(process.env.api_token);
+        const finolog = new Client(process.env.api_token);
 
         it('get user', done => {
             finolog.request('get', '/user').then(user => {
@@ -29,7 +29,7 @@ describe('Finolog', () => {
     });
 
     describe('Entities', () => {
-        const finolog = new Finolog(process.env.api_token);
+        const finolog = new Client(process.env.api_token);
 
        it('User', done => {
           assert.instanceOf(finolog.user, User, 'instance of User');
@@ -82,14 +82,14 @@ describe('Finolog', () => {
         });
     });
 
-    describe('Finolog with bizId in constructor', () => {
+    describe('Client with bizId in constructor', () => {
         let finolog;
 
         before(done => {
             const biz = new Biz(process.env.api_token);
             biz.all().then(biz => {
                 assert.isArray(biz);
-                finolog = new Finolog(process.env.api_token, biz[0].id);
+                finolog = new Client(process.env.api_token, biz[0].id);
                 done();
             }).catch(error => {
                 done(new Error(error));

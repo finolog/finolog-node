@@ -10,7 +10,7 @@ import Project from './Project';
 import Contractor from './Contractor';
 import Requisite from './Requisite';
 
-export default class Finolog extends Api {
+export default class Client extends Api {
     constructor(apiToken, biz_id = null) {
         super(apiToken);
         this.user = new User(this.apiToken);

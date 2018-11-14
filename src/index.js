@@ -1,4 +1,4 @@
-import Finolog from './entities/Finolog';
+import Client from './entities/Client';
 import User from './entities/User';
 import Currency from './entities/Currency';
 import Biz from './entities/Biz';
@@ -10,6 +10,6 @@ import Project from './entities/Project';
 import Contractor from './entities/Contractor';
 import Requisite from './entities/Requisite';
 
-export default Finolog;
+export default Client;
 
-export { User, Currency, Biz, Company, Account, Transaction, Category, Project, Contractor, Requisite };
+export { Client, User, Currency, Biz, Company, Account, Transaction, Category, Project, Contractor, Requisite };

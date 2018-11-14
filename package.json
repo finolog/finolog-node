@@ -1,6 +1,6 @@
 {
   "name": "finolog-node",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Official Node bindings to the Finolog API",
   "module": "dist/finolog-esm.js",
   "main": "dist/finolog-commonjs.js",

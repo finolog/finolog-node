@@ -32,6 +32,11 @@ const finolog = new Finolog('your api token key');
 import { User, Contractor } from 'finolog-node';
 const user = new User('your api token key');
 const contractor = new Contractor('your api token key');
+
+// or require
+
+const Finolog = require('finolog-node');
+const finolog = new Finolog.Client('your api token key');
 ```
 
 ### User
