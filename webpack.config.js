@@ -4,21 +4,17 @@ module.exports = {
     entry: './src/index.js',
     output: {
         path: path.join(__dirname, 'dist'),
-        filename: "index.js"
+        filename: 'index.js',
+        libraryTarget: 'umd',
     },
 
     module: {
         rules: [
             {
                 test: /\.js/,
-                use: [
-                    {
-                        loader: 'babel-loader',
-                        options: {
-                            presets: ['env']
-                        }
-                    }
-                ]
+                use: {
+                    loader: 'babel-loader',
+                }
             }
         ]
     }

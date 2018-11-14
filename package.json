@@ -1,11 +1,13 @@
 {
   "name": "finolog-node",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Official Node bindings to the Finolog API",
-  "module": "src/index.js",
+  "module": "dist/index.js",
   "main": "dist/index.js",
   "scripts": {
-    "build": "webpack --config webpack.config.js",
+    "dev": "webpack --mode=development --progress -p",
+    "watch": "webpack --mode=development --progress --watch",
+    "prod": "webpack --mode=production",
     "test": "mocha --require babel-register"
   },
   "keywords": [
