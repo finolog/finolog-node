@@ -1,21 +1,38 @@
 const path = require('path');
 
-module.exports = {
+const rules = [
+    {
+        test: /\.js/,
+        use: {
+            loader: 'babel-loader',
+        },
+    }
+];
+
+module.exports = [{
     entry: './src/index.js',
+    module: {rules},
     output: {
         path: path.join(__dirname, 'dist'),
-        filename: 'index.js',
-        libraryTarget: 'umd',
+        filename: 'finolog-esm.js',
     },
-
-    module: {
-        rules: [
-            {
-                test: /\.js/,
-                use: {
-                    loader: 'babel-loader',
-                }
-            }
-        ]
-    }
-};
+    name: 'esm',
+}, {
+    entry: './src/index.js',
+    module: {rules},
+    output: {
+        path: path.join(__dirname, 'dist'),
+        filename: 'finolog-amd.js',
+        libraryTarget: 'amd'
+    },
+    name: 'amd',
+}, {
+    entry: './src/index.js',
+    module: {rules},
+    output: {
+        path: path.join(__dirname, 'dist'),
+        filename: 'finolog-commonjs.js',
+        libraryTarget: 'commonjs'
+    },
+    name: 'commonjs',
+}];
