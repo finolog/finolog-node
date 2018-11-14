@@ -1,8 +1,8 @@
 {
   "name": "finolog-node",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Official Node bindings to the Finolog API",
-  "module": "dist/finolog-esm.js",
+  "module": "src/index.js",
   "main": "dist/finolog-commonjs.js",
   "scripts": {
     "dev": "webpack --mode=development --progress -p",
