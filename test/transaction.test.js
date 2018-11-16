@@ -1,6 +1,6 @@
 import { assert } from 'chai';
 import 'dotenv/config';
-import { Transaction, Biz, Account } from '../src/index';
+import { Transaction, Biz, Account } from '../dist/index';
 
 const transaction = new Transaction(process.env.api_token);
 const biz = new Biz(process.env.api_token);

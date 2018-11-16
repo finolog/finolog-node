@@ -1,6 +1,6 @@
 import { assert } from 'chai';
 import 'dotenv/config';
-import Client, { User, Biz, Currency, Company, Account, Transaction, Category, Project, Contractor, Requisite } from '../src/index';
+import Client, { User, Biz, Currency, Company, Account, Transaction, Category, Project, Contractor, Requisite } from '../dist/index';
 
 
 describe('Client', () => {

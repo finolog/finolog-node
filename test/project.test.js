@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import { Project, Biz } from '../src/index';
+import { Project, Biz } from '../dist/index';
 import 'dotenv/config';
 
 const project = new Project(process.env.api_token);

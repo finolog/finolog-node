@@ -1,6 +1,6 @@
 import { assert } from 'chai';
 import 'dotenv/config';
-import { User } from '../src/index';
+import { User } from '../dist/index';
 
 const user = new User(process.env.api_token);
 

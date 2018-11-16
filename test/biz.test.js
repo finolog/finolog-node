@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import { Biz } from '../src/index';
+import { Biz } from '../dist/index';
 import 'dotenv/config';
 
 

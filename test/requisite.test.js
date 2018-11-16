@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import { Requisite, Biz, Contractor } from '../src/index';
+import { Requisite, Biz, Contractor } from '../dist/index';
 import 'dotenv/config';
 
 const requisite = new Requisite(process.env.api_token);

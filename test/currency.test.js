@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import { Currency } from '../src/index';
+import { Currency } from '../dist/index';
 import 'dotenv/config';
 
 const currency = new Currency(process.env.api_token);

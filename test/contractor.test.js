@@ -1,7 +1,6 @@
 import { assert } from 'chai';
 import 'dotenv/config';
-import { Contractor, Biz } from '../src/index';
-
+import { Contractor, Biz } from '../dist/index';
 const contractor = new Contractor(process.env.api_token);
 const biz = new Biz(process.env.api_token);
 
